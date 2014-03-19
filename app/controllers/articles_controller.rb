@@ -1,9 +1,15 @@
 class ArticlesController < ApplicationController
 	include ArticlesHelper
-  
-  def index
-    @articles = Article.all
-  end
+
+
+
+	def index
+		if params[:tag]
+		  @articles = Article.tagged_with(params[:tag])
+		else
+		  @articles = Article.all
+		end
+	end
   
   def show
   	@article = Article.find(params[:id])

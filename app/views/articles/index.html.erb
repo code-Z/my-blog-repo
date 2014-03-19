@@ -1,4 +1,4 @@
-<h1>All Articles</h1>
+<h1>List of Articles</h1>
 
 <div id="tag_cloud">
 	<% tag_cloud Article.tag_counts, %w[s m l] do |tag, css_class| %>
@@ -20,5 +20,7 @@
   <br /><br />
 	<%= will_paginate @articles %>
   <br />
+  <% if logged_in? %>
   <%= link_to "Create a New Article", new_article_path, class: "new_article" %>
+  <% end %>
 </ul>

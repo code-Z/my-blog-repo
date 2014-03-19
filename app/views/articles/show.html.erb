@@ -1,5 +1,7 @@
 <h2><%= @article.title %></h2>
 
+<p><%= image_tag @article.image.url %></p>
+
 <p><%= @article.body %></p><br /><br /><br />
 
 <%= link_to "edit", edit_article_path(@article) %>

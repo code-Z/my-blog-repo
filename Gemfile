@@ -49,3 +49,5 @@ gem "paperclip"
 gem 'acts-as-taggable-on'
 
 gem 'will_paginate', '~> 3.0'
+
+gem 'sorcery'

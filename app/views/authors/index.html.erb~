@@ -1,0 +1,24 @@
+<h1>Listing authors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><b>Email</b></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @authors.each do |author| %>
+      <tr>
+        <td><%= author.email %>&nbsp;</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Author', new_author_path %>
